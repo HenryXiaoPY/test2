@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.55.33:3361/test"/>
+                <property name="username" value="yushiadmin"/>
+                <property name="password" value="1FLASH1flash***"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--配置要扫描的dao层的接口类-->
+    <mappers>
+        <package name="com.yushi.dao"/>
+    </mappers>
+
+</configuration>
